@@ -9,6 +9,7 @@
   font-family: var(--font-family, sans-serif);
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  font-weight: 400;
 }
 
 .page__body {
@@ -16,7 +17,6 @@
   min-width: 360px;
   min-height: 100%;
   font-size: 16px;
-  background-color: chocolate;
 }
 
 img {

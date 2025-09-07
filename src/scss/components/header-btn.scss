@@ -1,0 +1,29 @@
+.header-btn {
+    display: inline-flex;
+    align-items: center;
+    border-right: 1px solid var(--color-neutral-muted);
+    padding: 20px 24px;
+    width: 237px;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    gap: 12px;
+}
+
+.header-btn__icon {
+    display: block;
+    stroke: currentColor;
+    width: 16px;
+    height: 10px;
+    object-fit: cover;
+}
+
+.header-btn__angle {
+    display: block;
+    margin-left: auto;
+    fill: currentColor;
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+}

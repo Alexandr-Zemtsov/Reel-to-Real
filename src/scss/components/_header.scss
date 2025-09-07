@@ -1,10 +1,22 @@
 .header {}
 
-.header__top {}
+.header__top {
+    padding-top: 20px;
+    padding-bottom: 21px;
+    border-bottom: 1px solid var(--color-neutral-muted);
+}
 
-.header__container {}
+.header__container {
+    // display: grid;
+    // grid-template-columns: auto 1fr minmax(169px, auto);
+    display: flex;
+    align-items: center;
+}
 
 .header__logo {
+    position: relative;
+    top: 2px;
+    margin-right: 36px;
     font-family: var(--second-family);
     font-weight: 600;
     font-size: 32px;
@@ -13,25 +25,56 @@
     color: var(--color-primary);
 }
 
-.header__actions {}
+.header__actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 32px;
 
-.header__fav {}
+}
 
-.header__action {}
+.header__fav,
+.header__cart {
+    width: 24px;
+    height: 24px;
+}
 
-.header__cart {}
+.header__action {
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    transition: color 0.3s ease-in-out;
+
+    .icon {
+        fill: currentColor;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 3px;
+    }
+
+    @include hover {
+        color: var(--color-secondary);
+    }
+
+    &:active {
+        color: var(--color-primary-active);
+    }
+}
 
 .header__enter {}
 
 .header__bottom {}
 
-.header__catalog {}
-
-.header-btn {}
-
-.header-btn__icon {}
-
-.header-btn__angle {}
+.header__catalog {
+    margin-left: calc(-1 * var(--gap));
+}
 
 .header__collection {}
 
