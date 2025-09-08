@@ -8,7 +8,24 @@
     line-height: 120%;
     text-transform: uppercase;
     color: var(--color-primary);
+    transition: color 0.3s ease-in-out;
     gap: 12px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: 1px solid currentColor;
+    }
+
+    @include hover {
+        color: var(--color-secondary);
+    }
+
+    &:active {
+        color: var(--color-primary-active);
+    }
 }
 
 .header-btn__icon {

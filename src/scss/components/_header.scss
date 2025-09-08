@@ -1,4 +1,4 @@
-.header {}
+// .header {}
 
 .header__top {
     padding-top: 20px;
@@ -68,16 +68,42 @@
     }
 }
 
-.header__enter {}
+// .header__enter {}
 
-.header__bottom {}
+.header__bottom {
+    border-bottom: 1px solid var(--color-neutral-muted);
+}
 
 .header__catalog {
     margin-left: calc(-1 * var(--gap));
 }
 
-.header__collection {}
+.header__collection {
+    margin-right: 1px;
+}
 
-.input-reset {}
+// .input-reset {}
 
-.header__phone {}
+.header__phone {
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-primary);
+    margin-left: auto;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 3px;
+    }
+
+    @include hover {
+        color: var(--color-primary-hover);
+    }
+
+    &:active {
+        color: var(--color-primary-active);
+    }
+}

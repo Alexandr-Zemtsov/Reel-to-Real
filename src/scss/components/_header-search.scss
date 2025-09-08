@@ -7,6 +7,20 @@
 .header-search__label {
     position: relative;
     width: 100%;
+    color: var(--color-secondary);
+
+    &:has(.header-search__input:hover) {
+        color: var(--color-secondary);
+        opacity: 0.8;
+    }
+
+    &:has(.header-search__input:focus-visible) {
+        color: var(--color-primary);
+    }
+
+    &:has(.header-search__input:active) {
+        color: var(--color-primary-active);
+    }
 }
 
 .header-search__icon {
@@ -18,9 +32,10 @@
     height: 21px;
     object-fit: cover;
     fill: none;
-    stroke: var(--color-secondary);
+    stroke: currentColor;
     stroke-width: 1.5px;
     translate: 0 -50%;
+    transition: color 0.3s ease-in-out;
 }
 
 .header-search__input {
@@ -33,8 +48,25 @@
     line-height: 140%;
     color: var(--color-primary);
     letter-spacing: 0.17px;
+    transition: color 0.3s ease-in-out;
 
     &::placeholder {
         color: var(--color-secondary);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: 1px solid currentColor;
+    }
+
+    @include hover {
+        color: var(--color-secondary);
+    }
+
+    &:active {
+        color: var(--color-primary-active);
     }
 }
